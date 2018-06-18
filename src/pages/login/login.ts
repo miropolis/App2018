@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { animation } from '@angular/core/src/animation/dsl';
 
 /**
  * Generated class for the LoginPage page.
@@ -20,6 +21,7 @@ export class LoginPage {
 
   gotoTabsPage() {
     this.navCtrl.push('TabsPage');
+    this.navCtrl.setRoot('TabsPage');
   }
 
   ionViewDidLoad() {
