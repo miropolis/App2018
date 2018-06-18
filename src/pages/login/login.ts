@@ -18,6 +18,10 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  gotoTabsPage() {
+    this.navCtrl.push('TabsPage');
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
