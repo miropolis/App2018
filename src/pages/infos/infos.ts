@@ -18,6 +18,11 @@ export class InfosPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  gobacktoLoginPage() {
+    this.navCtrl.push('LoginPage');
+    this.navCtrl.setRoot('LoginPage');
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad InfosPage');
   }
