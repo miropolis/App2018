@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the LoginPage page.
@@ -15,12 +16,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private storage: Storage, public navParams: NavParams) {
   }
 
-  gotoTabsPage() {
-    this.navCtrl.push('TabsPage');
-    this.navCtrl.setRoot('TabsPage');
+  pw1=""
+  login() {
+    console.log(this.pw1);
+    switch(this.pw1) { 
+      case "Hallo": { 
+        this.storage.set("isLoggedIn", true);
+        this.storage.set("group", 1);
+        this.navCtrl.push('TabsPage');
+        this.navCtrl.setRoot('TabsPage');
+         break; 
+      } 
+      case "Nerd": { 
+        this.storage.set("isLoggedIn", true);
+        this.storage.set("group", 2);
+        this.navCtrl.push('TabsPage');
+        this.navCtrl.setRoot('TabsPage');
+         break; 
+      } 
+      default: { 
+         
+         break; 
+      } 
+   } 
   }
 
   ionViewDidLoad() {

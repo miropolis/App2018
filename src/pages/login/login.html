@@ -14,8 +14,9 @@
 
 
 <ion-content padding>
-  <div>Dies ist die Login Page</div>
-  <div>Work in Progress</div>
-<div>
-  <button ion-button full (click)="gotoTabsPage()">Login</button></div>
+  <p><b>Bitte gib hier dein Passwort ein. Du erhälst es von deinen Tutoren.</b></p>
+  <ion-item>
+      <ion-input type="password" placeholder="Passwort" [(ngModel)]="pw1"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="login()">Login</button>
 </ion-content>
