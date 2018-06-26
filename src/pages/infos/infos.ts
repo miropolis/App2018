@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the InfosPage page.
  *
@@ -15,12 +16,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InfosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private storage: Storage, public navParams: NavParams) {
   }
 
-  gobacktoLoginPage() {
-    this.navCtrl.push('LoginPage');
-    this.navCtrl.setRoot('LoginPage');
+  setisLoggedInToFalse() {
+    this.storage.set("isLoggedIn", false);
   }
 
   ionViewDidLoad() {
