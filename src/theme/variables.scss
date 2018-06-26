@@ -43,11 +43,10 @@ $colors: (
 $tabs-background: color($colors, primary);
 $tabs-tab-color-active: color($colors, secondary);
 $tabs-tab-color-inactive: color($colors, light);
-$tabs-md-tab-color-inactive: color($colors, light);
 
 $background-color: color($colors, light);
 
-$card-md-header-color: color($colors, primary);
+$toolbar-background: color($colors, primary);
 
 
 // App iOS Variables
@@ -60,7 +59,7 @@ $card-md-header-color: color($colors, primary);
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+$tabs-md-tab-color-inactive: color($colors, light);
 
 
 
