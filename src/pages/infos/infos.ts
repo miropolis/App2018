@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { AlertController } from 'ionic-angular';
 
 
 /**
@@ -17,11 +18,41 @@ import { Storage } from '@ionic/storage';
 })
 export class InfosPage {
 
-  constructor(public navCtrl: NavController, private storage: Storage, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private storage: Storage, public navParams: NavParams) {
   }
 
-  setisLoggedInToFalse() {
-    this.storage.set("isLoggedIn", false);
+  logoutAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Möchtest du dich wirklich abmelden?',
+      buttons: [
+        {
+          text: 'Nein',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Ja',
+          handler: () => {
+            console.log('Abmelden getriggert');
+            this.storage.set("isLoggedIn", false);
+            this.storage.set("group", 0);
+            this.successfullogoutAlert();
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  successfullogoutAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Du hast dich erfolgreich abgemeldet',
+      subTitle: 'Bitte starte die App neu, um dich erneut einzuloggen',
+      enableBackdropDismiss: false,
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {
