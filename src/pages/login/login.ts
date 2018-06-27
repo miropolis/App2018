@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the LoginPage page.
@@ -16,7 +17,7 @@ import { Storage } from '@ionic/storage';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, private storage: Storage, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private storage: Storage, public navParams: NavParams) {
   }
 
   pw1=""
@@ -38,10 +39,19 @@ export class LoginPage {
          break; 
       } 
       default: { 
-         
+         this.presentAlert();
          break; 
       } 
    } 
+  }
+
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Falsches Passwort',
+      message: "<p>Deine Eingabe:</p> " + this.pw1,
+      buttons: ['Verstanden']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {
