@@ -38,6 +38,27 @@ export class LoginPage {
         this.navCtrl.setRoot('TabsPage');
          break; 
       } 
+      case "gruppe3": { 
+        this.storage.set("isLoggedIn", true);
+        this.storage.set("group", 3);
+        this.navCtrl.push('TabsPage');
+        this.navCtrl.setRoot('TabsPage');
+         break; 
+      }
+      case "gruppe4": { 
+        this.storage.set("isLoggedIn", true);
+        this.storage.set("group", 4);
+        this.navCtrl.push('TabsPage');
+        this.navCtrl.setRoot('TabsPage');
+         break; 
+      }
+      case "gruppe5": { 
+        this.storage.set("isLoggedIn", true);
+        this.storage.set("group", 5);
+        this.navCtrl.push('TabsPage');
+        this.navCtrl.setRoot('TabsPage');
+         break; 
+      }
       default: { 
          this.presentAlert();
          break; 
