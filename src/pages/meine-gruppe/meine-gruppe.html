@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <div id="g1"> <!-- id="g+Gruppennummer" -->
+  <div *ngIf="Gruppe1"> <!-- id="g+Gruppennummer" -->
     <div class="card">
       <div class="item item-divider">
           <!-- Gruppennummer: -->
@@ -62,16 +62,16 @@
               <!-- Karaoke-Songtext der jeweiligen Gruppe -->
     </div>
   </div>
-    <div id="g2"> <!-- id="g+Gruppennummer" -->
+    <div *ngIf="Gruppe2"> <!-- Gruppe Variable -->
         Test Gruppe 2
     </div>
-    <div id="g3"> <!-- id="g+Gruppennummer" -->
+    <div *ngIf="Gruppe3"> <!-- Gruppe Variable -->
         Test Gruppe 3
     </div>
-    <div id="g4"> <!-- id="g+Gruppennummer" -->
+    <div *ngIf="Gruppe4"> <!-- Gruppe Variable -->
         Test Gruppe 4
     </div>
-    <div id="g5"> <!-- id="g+Gruppennummer" -->
+    <div *ngIf="Gruppe5"> <!-- Gruppe Variable -->
         Test Gruppe 5
     </div>
 </ion-content>
