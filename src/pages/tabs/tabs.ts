@@ -18,8 +18,7 @@ export class TabsPage {
   tab1 = 'NewsFeedPage';
   tab2 = "MeineGruppePage";
   tab3 = "ZeitplanPage";
-  tab4 = "KartePage";
-  tab5 = "InfosPage";
+  tab4 = "InfosPage";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
