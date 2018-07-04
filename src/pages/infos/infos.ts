@@ -59,4 +59,8 @@ export class InfosPage {
     console.log('ionViewDidLoad InfosPage');
   }
 
+  openMap() {
+    this.navCtrl.push('KartePage');
+  }
+
 }

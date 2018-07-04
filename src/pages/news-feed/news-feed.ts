@@ -22,4 +22,8 @@ export class NewsFeedPage {
     console.log('ionViewDidLoad NewsFeedPage');
   }
 
+  openMap() {
+    this.navCtrl.push('KartePage');
+  }
+
 }

@@ -22,4 +22,8 @@ export class ZeitplanPage {
     console.log('ionViewDidLoad ZeitplanPage');
   }
 
+  openMap() {
+    this.navCtrl.push('KartePage');
+  }
+
 }

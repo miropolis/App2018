@@ -45,4 +45,8 @@ Gruppe5;
     console.log('Gruppen Nummer:', this.GruppeNummer);
   }
 
+  openMap() {
+    this.navCtrl.push('KartePage');
+  }
+
 }
