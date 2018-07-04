@@ -25,24 +25,11 @@ Gruppe5;
 
   constructor(public navCtrl: NavController, private storage: Storage, public navParams: NavParams) {
     this.storage.get('group').then((val) => {
-      switch(val) {
-        case 1:
-            this.Gruppe1=true;
-            break;
-        case 2:
-            this.Gruppe2=true;
-            break;
-        case 3:
-            this.Gruppe3=true;
-            break;
-        case 4:
-            this.Gruppe4=true;
-            break;
-        case 5:
-            this.Gruppe5=true;
-            break;
-      
-        } 
+      for(var i=1; i<=5; i++) {
+        let elemAk = document.getElementById("g"+i);
+        if(i != val) {
+          elemAk.style.display = "none";  }
+      }
     });
   }
 
