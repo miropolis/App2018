@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "426448395643",
+    "firebase_url": "https://o-phase18.firebaseio.com",
+    "project_id": "o-phase18",
+    "storage_bucket": "o-phase18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426448395643:android:030b329e121882b0",
+        "android_client_info": {
+          "package_name": "de.ophase.app18"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426448395643-47t2gk5kg7ctiuqebbane9c0h8kvsjso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-EZrX7DdXXXYMRnTq6GG4gV5LogrBJwE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
